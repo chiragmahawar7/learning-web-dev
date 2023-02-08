@@ -67,3 +67,32 @@ console.log(numbers.includes(20));
 // Create an Array from a String
 const arr = Array.from('ABCDEFG');
 console.log(arr);
+
+// 12. slice
+// The Slice method takes 2 arguments. 
+// 1st Argument: Specifies from where the selection should be started.
+// 2nd Argument: Specifies at which level the endpoint should be. Default - return the elements from the starting index to the end of the array.
+const arr1 = [1, 5, 8, 9];
+console.log(arr1.slice(1, 3)); //[ 5, 8 ]
+
+//If you put a negative number while calling, the selection will be selected from the end of the array.
+console.log(arr1.slice(-2)); //[ 8, 9 ]
+// slice returns the selected elements from the array. does not change the original array
+
+
+// 13. splice
+// 1st Argument: Specifies at which position a new element or existing element should be added/removed.
+// If the value is negative the position will be counted from the end of the array.
+// 2nd Argument: The numbers of elements to be removed from the starting position.
+// If it is 0, then no elements will be removed.
+// If it is not passed, it will delete all elements from the starting position.
+
+console.log(arr1.splice(1, 2)); // [ 5, 8 ]
+console.log(arr1); // [1,9]
+
+// 3rd Argument ->nth Argument: The value of the items you want to add to the array.
+const arr2 = [1, 5, 8, 9];
+console.log(arr2.splice(1, 2, 'Hi', 'Chirag')); // [5,8]
+console.log(arr2); // [1,'Hi','Chirag',9]
+
+// Splice - returns removed elements & updates the original array
