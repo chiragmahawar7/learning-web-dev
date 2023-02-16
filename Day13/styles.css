@@ -1,0 +1,18 @@
+.element-container {
+    border: 1px solid gray;
+    padding: 16px;
+    margin: 16px;
+}
+
+.header {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.meter {
+    width: 40%;
+}
+
+.element-detail {
+    font-style: italic;
+}

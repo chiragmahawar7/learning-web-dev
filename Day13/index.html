@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<title>Learning Web Dev</title>
+<script src="cool-html.js"></script>
+<link rel="stylesheet" href="styles.css">
+
+
+<body>
+
+    <h1>Learning Web Dev - Day 13</h1>
+    <h2>Cool HTML Elements</h2>
+
+    <div class="element-container">
+        <div class="header">1. meter</div>
+        <meter class="meter" min="0" max="100" low="25" high="75" optimum="80" id="meter" value="40"></meter>
+        <div class="action-btns">
+            <button type="button" onClick="increaseMeter()">Increase Meter by 5</button>
+            <button type="button" onClick="decreaseMeter()">Decrease Meter by 5</button>
+        </div>
+    </div>
+
+    <div class="element-container">
+        <div class="header">2. sup & sub</div>
+        <div class="header-detail">superscripts (like x²) with sup and subscripts (like x₀) </div>
+        <div class="element-detail">
+            Alomost every developer's favorite molecule is
+            <strong>
+                C<sub>8</sub>
+                H<sub>10</sub>
+                N<sub>4</sub>
+                O<sub>2</sub>
+            </strong>, also known as Caffeine :)
+        </div>
+    </div>
+
+    <div class="element-container">
+        <div class="header">3. datalist</div>
+        <div class="header-detail">datalist allows you to add an autocomplete suggestions to your input elements.</div>
+        <label for="ice-cream-choice">Chhose icecream flavor</label>
+        <input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice">
+        <datalist id="ice-cream-flavors">
+            <option value="Chocolate"></option>
+            <option value="Strawberry"></option>
+            <option value="Vanilla"></option>
+            <option value="Butterscotch"></option>
+        </datalist>
+    </div>
+
+    <div class="element-container">
+        <div class="header">4. details & summary</div>
+        <div class="header-detail">details and summary are used to create collapsible content without using any JavaScript. It's the semantic method of creating dropdowns.</div>
+        <details>
+            <summary>My Details</summary>
+            Hi. Chirag here.
+        </details>
+    </div>
+</body>
+
+</html>
