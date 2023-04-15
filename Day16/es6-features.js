@@ -76,3 +76,8 @@ obj5[key] = 'Maths';
 
 // BETTER WAY - object property names in ES6 can use expressions
 obj5[`topic${index}`] = 'Art';
+
+// 6. shuffle an array
+let arr = [['a'], 67, true, false, '55'];
+arr = arr.sort(() => 0.5 - Math.random())
+console.log(arr);
