@@ -1,0 +1,22 @@
+:root {
+    --main-bg: #f5f5f5;
+    --main-text:rgb(45,37,50);
+}
+
+[data-theme="dark"] {
+    --main-bg: rgb(45,37,50);
+    --main-text:#f5f5f5;
+}
+
+body {
+    background-color: var(--main-bg);
+}
+
+h1,h2 {
+    color: var(--main-text);
+}
+
+.toggle-btn {
+    display: grid;
+    place-items: center;
+}
