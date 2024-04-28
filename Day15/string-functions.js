@@ -78,3 +78,9 @@ console.log(str2.toLowerCase()); // "js is fun!"
 // 17. toUpperCase()
 // The toUpperCase() method capitalizes the entire string.
 console.log(str2.toUpperCase()); // "JS IS FUN!"
+
+// 18. lastIndexOf()
+// find the last occurence of a substring in a string
+const str3 = "this is a js string and js string is a nice";
+const lastIndexOfJs = str3.lastIndexOf("js");
+console.log(lastIndexOfJs);
