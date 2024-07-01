@@ -20,6 +20,46 @@ arr5.push(4); // updates both arrays
 console.log(arr5); // [ 1, 2, 3, 4 ]
 console.log(arr4); // [ 1, 2, 3, 4 ]
 
+// 3. Object destructuring
+const person = {
+    firstName: 'John',
+    lastName: 'Doe',
+    age: 42,
+    location: {
+        country: 'USA',
+        city: 'New York'
+    }
+};
+const { firstName, lastName, ...otherPersonData } = person;
+console.log(firstName, lastName, otherPersonData);
+// John Doe { age: 42, location: { country: 'USA', city: 'New York' } }
+
+// 4. merge objects
+const userData = {
+    name: 'John',
+    surname: 'Doe'
+}
+const additionalUserData = {
+    country: 'USA',
+    city: 'New York'
+}
+const user = { ...userData, ...additionalUserData };
+console.log(user);
+//{"name": "John", "surname": "Doe", "country": "USA", "city": "New York"} 
+
+// 5. array destructuring
+const animals = ['cat', 'dog', 'cow'];
+const [first, ...others] = animals;
+console.log(first); // "cat"
+console.log(others); // ["dog", "cow"] 
+
+// 6. merge arrays
+const animals1 = ['dog', 'cat'];
+const newAnimals = ['cow'];
+const allAnimals = [...animals1, ...newAnimals];
+console.log(allAnimals);
+// ["dog", "cat", "cow"] 
+
 // use spread op
 const arr6 = [1, 2, 3];
 const arr7 = [...arr6];
