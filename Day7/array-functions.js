@@ -96,3 +96,30 @@ console.log(arr2.splice(1, 2, 'Hi', 'Chirag')); // [5,8]
 console.log(arr2); // [1,'Hi','Chirag',9]
 
 // Splice - returns removed elements & updates the original array
+
+// 14. flat
+// flattens a nested array into a single-level array
+// @param depth — The maximum recursion depth
+
+const nestedArray = [1, [2, [3, [4]]]];
+const flattenedArray = nestedArray.flat(2);
+console.log(flattenedArray);
+
+// Output: [1, 2, 3, [4]]
+
+// 15. flatMap
+// first maps each element using a function and then flattens the result into a new array.
+
+const numbersArr = [1, 2, 3];
+const doubledAndFlattened = numbersArr.flatMap(num => [num * 2]);
+console.log(doubledAndFlattened);
+
+// Output: [2, 4, 6]
+
+// 16. concat
+// merges two or more arrays into a single array.
+
+const array1 = ["Hello"];
+const array2 = ["World"];
+const combined = array1.concat(array2);
+console.log(combined);
