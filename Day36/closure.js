@@ -20,3 +20,20 @@ console.log(z); // 7
 // - memoize
 // - maintaining state in async
 // - setTimeouts
+
+// data encapsulation
+
+function counter() {
+    var count = 0;
+    return function incrementCount() {
+        count++;
+        console.log(count);
+    }
+}
+var counter1 = counter();
+counter1(); // output - 1
+
+var counter2 = counter();
+counter2(); // output - 1 new copy of function
+
+// this way, count is encapsulated inside and cannot be accessed from other part of code
