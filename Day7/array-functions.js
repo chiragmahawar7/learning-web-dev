@@ -123,3 +123,66 @@ const array1 = ["Hello"];
 const array2 = ["World"];
 const combined = array1.concat(array2);
 console.log(combined);
+
+// 17. copyWithin
+// it takes a portion of the array and copies it to another spot within the same array.
+// It doesn’t increase the length
+
+const ar = [1, 2, 3, 4, 5];
+ar.copyWithin(0, 3);
+console.log(ar); // [4, 5, 3, 4, 5]
+
+// Here, the elements from index 3 (4, 5) are copied to start at index 0, replacing 1 and 2.
+
+// 18 at()
+
+const colors = ['red', 'blue', 'green', 'yellow'];
+console.log(colors.at(-1)); // 'yellow'
+
+// 19. with()
+// original array is unchanged
+
+console.log(colors.with(1, 'purple')); // ['red', 'purple', 'green', 'yellow']
+console.log(colors); // ['red', 'blue', 'green', 'yellow']
+
+// 20. reduceRight()
+// processes the array from right to left
+
+const arrRed = ['a', 'b', 'c', 'd'];
+const resultReduce = arrRed.reduce((acc, curr) => acc + curr); 
+const resultReduceRight = arrRed.reduceRight((acc, curr) => acc + curr); 
+console.log(resultReduce); // 'abcd'
+console.log(resultReduceRight); // 'dcba'
+
+// 21. findLast
+// starts its search from the end of the array
+
+const nums = [1, 2, 3, 4, 5, 6, 7];
+console.log(nums.findLast(n => n % 2 === 0));
+
+// 22. toSorted
+// immutable form of sort()
+
+const arrN = [3, 1, 4, 1, 5];
+
+// Immutable sorting
+console.log(arrN.toSorted()); // [1, 1, 3, 4, 5]
+console.log(arrN); // [3, 1, 4, 1, 5]
+
+// 23. toReversed
+// immutable form of reverse()
+
+// Immutable reversing
+console.log(arrN.toReversed()); // [5, 1, 4, 1, 3]
+console.log(arrN); // [3, 1, 4, 1, 5]
+
+// 24. lastIndexOf
+// finds the last occurrence of an element in an array
+
+const fruits = ['apple', 'banana', 'cherry', 'apple'];
+
+// Find the last occurrence of 'apple'
+console.log(fruits.lastIndexOf('apple')); // 3
+
+// Limit the search to the first 3 elements
+console.log(fruits.lastIndexOf('apple', 2)); // 0
